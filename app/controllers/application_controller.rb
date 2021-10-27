@@ -11,17 +11,19 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/feelers/:id" do
-    user = Feeler.find_by(user: params[:id])
-    feelings = Feeler.find_by(user: params[:id]).feelings
+    feeler = Feeler.find_by(name: params[:id])
+    feelings = Feeler.find_by(name: params[:id]).feelings
 
-    {user: user, feelings: feelings}.to_json
+    {feeler: feeler, feelings: feelings}.to_json
   end
 
 
   post '/feelings/:user_id' do
     Feeling.create(feeler_id: params[:user_id], color: params[:color], text: params[:text])
-    binding.pry
+    feeler = Feeler.find_by(id: params[:user_id])
+    feelings = Feeler.find_by(id: params[:user_id]).feelings
 
+    {feeler: feeler, feelings: feelings}.to_json
   end
 
 end
