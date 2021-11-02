@@ -1,11 +1,9 @@
 # Mindful Mood Tracker 
 
-An app to mindfully keep track of your moods, feelings & thoughts. Designed with a minimal & peaceful UI. 🧘‍♀️✨ 
+An app to mindfully keep track of your moods, feelings & thoughts. Designed with a minimal & peaceful UI.
 
 ### built with 
 Mindful Mood Tracker was built with a Ruby on Rails API and a React.js frontend. 
-
-If you'd like to mindfully track your moods follow these steps: 
 
 ## setup 
 
